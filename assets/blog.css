@@ -235,6 +235,18 @@ h3 { font-size: clamp(21px, 3vw, 26px); }
 .report-toc #markdown-toc > li + li { margin-top: 8px; }
 .report-toc #markdown-toc > li > a { font-weight: 650; }
 
+.report-example {
+  margin: 24px 0;
+  padding: clamp(14px, 3vw, 22px);
+  border: 1px solid var(--fn-line);
+  border-left: 3px solid #e3c686;
+  background: #faf7ef;
+  color: var(--fn-secondary);
+  font-style: italic;
+}
+.report-example > :first-child { margin-top: 0; }
+.report-example > :last-child { margin-bottom: 0; }
+
 @media (min-width: 800px) {
   .reading-column--with-toc {
     display: grid;
