@@ -69,12 +69,12 @@ a:focus-visible, main:focus-visible { outline: 2px solid #775509; outline-offset
   position: absolute;
   z-index: -1;
   inset: 0;
-  background: url("mountain-background.svg") right 180px bottom / 255px auto no-repeat;
-  opacity: .34;
+  background: url("mountain-background.svg") right 180px bottom 5px / clamp(140px, 24vw, 224px) auto no-repeat;
+  opacity: .78;
   content: "";
 }
 
-.home-intro h1 { font-size: clamp(25px, 4vw, 34px); }
+.home-intro h1 { font-size: 19px; font-weight: 600; }
 .home-intro p { margin: 6px 0 0; color: var(--fn-secondary); font-size: 14px; }
 
 .fn-brand {
@@ -231,11 +231,13 @@ h3 { font-size: clamp(21px, 3vw, 26px); }
   .fn-shell { width: calc(100% - 32px); }
   .fn-top { padding: 12px 0; }
   .fn-top--home { padding: 16px 0 6px; }
+  .home-intro h1 { font-size: 18px; }
   .fn-top--home::before {
-    background-position: right -16px bottom;
-    background-size: 200px auto;
-    opacity: .18;
+    background-position: right bottom 4px;
+    background-size: 136px auto;
+    opacity: .68;
   }
+  .fn-top--home .site-nav { flex-basis: 100%; }
   .site-nav { gap: 4px; }
   .post-row { grid-template-columns: minmax(0, 1fr); gap: 5px; padding: 14px; }
   .post-meta { flex-direction: row; align-items: center; flex-wrap: wrap; padding-top: 0; }
