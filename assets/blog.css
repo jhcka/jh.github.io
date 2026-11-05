@@ -189,6 +189,8 @@ h3 { font-size: clamp(21px, 3vw, 26px); }
   margin-inline: auto;
   padding-bottom: clamp(40px, 7vw, 76px);
 }
+.reading-column--report { max-width: 860px; }
+.reading-column--report .article-header h1 { font-size: clamp(30px, 5vw, 46px); }
 .article-header {
   padding: 20px 0 26px;
   border-bottom: 1px solid var(--fn-line);
@@ -206,6 +208,48 @@ h3 { font-size: clamp(21px, 3vw, 26px); }
 .prose pre { overflow: auto; border: 1px solid var(--fn-line); }
 .prose blockquote { border-left: 3px solid var(--fn-gold); }
 .prose blockquote > p { margin: 0; }
+
+.report-toc {
+  margin: 28px 0;
+  padding: 16px 20px;
+  border: 1px solid var(--fn-line);
+  background: var(--fn-surface);
+  font-size: 15px;
+}
+.report-toc p, .report-toc ul { margin: 0; }
+.report-toc ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  gap: 4px 18px;
+  padding: 6px 0 0;
+  list-style: none;
+}
+.table-scroll {
+  margin: 18px 0 24px;
+  overflow-x: auto;
+  border: 1px solid var(--fn-line);
+  background: var(--fn-surface);
+}
+.table-scroll:focus-visible { outline: 2px solid #775509; outline-offset: 3px; }
+.table-scroll table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 1.65;
+}
+.table-scroll :where(th, td) {
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--fn-line);
+}
+.table-scroll th { background: #f2ead7; }
+.table-scroll tbody tr:last-child td { border-bottom: 0; }
+.report-figure { margin: 24px 0; }
+.report-figure .table-scroll { margin: 0; }
+.report-figure img { display: block; width: 100%; min-width: 580px; }
+.report-figure figcaption { margin-top: 6px; color: var(--fn-secondary); font-size: 13px; }
 
 .site-footer {
   padding: 16px 0;

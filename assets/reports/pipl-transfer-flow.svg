@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 672" width="760" height="672">
+  <title>个人信息出境判断流程</title>
+  <defs>
+    <marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <path d="M0 0 7 3.5 0 7Z" fill="#8c6b24"/>
+    </marker>
+  </defs>
+  <rect width="760" height="672" fill="#f5f3ed"/>
+  <g fill="none" stroke="#8c6b24" stroke-width="1.5" marker-end="url(#arrow)">
+    <path d="M380 68v24"/>
+    <path d="M380 142v25"/>
+    <path d="M380 223v36"/>
+    <path d="M245 195H87v285"/>
+    <path d="M380 315v36"/>
+    <path d="M515 287h117v193"/>
+    <path d="M380 407v73"/>
+    <path d="M245 379h-67v101"/>
+    <path d="M130 560v66h100"/>
+    <path d="M380 560v43"/>
+    <path d="M630 560v66H530"/>
+  </g>
+  <g stroke="#cabc9b" fill="#fffefa">
+    <rect x="254" y="18" width="252" height="50"/>
+    <rect x="216" y="92" width="328" height="50"/>
+    <rect x="22" y="480" width="216" height="80"/>
+    <rect x="266" y="480" width="228" height="80"/>
+    <rect x="522" y="480" width="216" height="80"/>
+    <rect x="230" y="603" width="300" height="46"/>
+  </g>
+  <g stroke="#cfa254" fill="#f8e9c6">
+    <rect x="245" y="167" width="270" height="56"/>
+    <rect x="245" y="259" width="270" height="56"/>
+    <rect x="245" y="351" width="270" height="56"/>
+  </g>
+  <g font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" text-anchor="middle" fill="#201e19" font-size="17">
+    <text x="380" y="49">建立出境活动台账</text>
+    <text x="380" y="123">识别个人信息、重要数据与累计人数</text>
+    <text x="380" y="201">是否符合第 7.3 节豁免</text>
+    <text x="380" y="293">是否属于安全评估门槛</text>
+    <text x="380" y="385">是否达到标准合同或认证门槛</text>
+    <text x="130" y="514">PIPIA、告知、单独同意</text>
+    <text x="130" y="538">合同与技术措施</text>
+    <text x="380" y="514">选择标准合同备案</text>
+    <text x="380" y="538">或出境认证</text>
+    <text x="630" y="507">自评估和整改</text>
+    <text x="630" y="530">省级网信部门转报</text>
+    <text x="630" y="551">国家网信部门</text>
+    <text x="380" y="632">上线后监测、变更复评和事件处置</text>
+  </g>
+  <g font-family="PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif" text-anchor="middle" fill="#795b24" font-size="14">
+    <text x="167" y="186">是</text>
+    <text x="395" y="244">否</text>
+    <text x="574" y="279">是</text>
+    <text x="395" y="336">否</text>
+    <text x="204" y="370">否</text>
+    <text x="395" y="446">是</text>
+  </g>
+</svg>
