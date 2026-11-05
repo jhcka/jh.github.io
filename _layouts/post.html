@@ -1,7 +1,10 @@
 ---
 layout: default
 ---
-<article class="reading-column{% if page.report %} reading-column--report{% endif %}">
+{% assign report_parts = content | split: '<!-- report-body -->' %}
+{% assign has_report_toc = false %}
+{% if page.report and report_parts.size == 2 %}{% assign has_report_toc = true %}{% endif %}
+<article class="reading-column{% if page.report %} reading-column--report{% endif %}{% if has_report_toc %} reading-column--with-toc{% endif %}">
   <header class="article-header">
     <a class="text-link" href="{{ '/archive/' | relative_url }}">← 返回归档</a>
     <div class="article-meta fn-meta">
@@ -11,7 +14,15 @@ layout: default
     <h1>{{ page.title | escape }}</h1>
     {% if page.description %}<p class="lede">{{ page.description | escape }}</p>{% endif %}
   </header>
+  {% if has_report_toc %}
+  <details class="report-toc" open>
+    <summary>目录</summary>
+    <nav aria-label="文章目录">
+      {{ report_parts | first }}
+    </nav>
+  </details>
+  {% endif %}
   <div class="prose">
-    {{ content }}
+    {% if has_report_toc %}{{ report_parts | last }}{% else %}{{ content }}{% endif %}
   </div>
 </article>
