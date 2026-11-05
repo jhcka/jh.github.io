@@ -26,3 +26,6 @@ layout: default
     {% if has_report_toc %}{{ report_parts | last }}{% else %}{{ content }}{% endif %}
   </div>
 </article>
+{% if has_report_toc %}
+<script src="{{ '/assets/report-toc.js' | relative_url }}" defer></script>
+{% endif %}

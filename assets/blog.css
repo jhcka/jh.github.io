@@ -219,7 +219,7 @@ h3 { font-size: clamp(21px, 3vw, 26px); }
 }
 .report-toc summary { cursor: pointer; font-weight: 650; }
 .report-toc summary:focus-visible { outline: 2px solid #775509; outline-offset: 3px; }
-.report-toc nav { max-height: 42vh; overflow-y: auto; margin-top: 8px; padding: 4px; }
+.report-toc nav { margin-top: 8px; padding: 4px; }
 .report-toc ul {
   margin: 0;
   padding: 0;
@@ -232,6 +232,12 @@ h3 { font-size: clamp(21px, 3vw, 26px); }
 }
 .report-toc a { display: block; padding: 4px 0; text-decoration: none; }
 .report-toc a:hover { text-decoration: underline; }
+.report-toc a[aria-current="location"] {
+  background: #f8e9c6;
+  color: #684809;
+  box-shadow: -2px 0 var(--fn-gold);
+}
+.reading-column--with-toc .prose :is(h2, h3, h4) { scroll-margin-top: 16px; }
 .report-toc #markdown-toc > li + li { margin-top: 8px; }
 .report-toc #markdown-toc > li > a { font-weight: 650; }
 
@@ -259,10 +265,15 @@ h3 { font-size: clamp(21px, 3vw, 26px); }
   .reading-column--with-toc > .report-toc {
     grid-area: 1 / 1 / span 2;
     align-self: start;
+  }
+  .report-toc--tracking {
     position: sticky;
     top: 16px;
   }
-  .report-toc nav { max-height: calc(100vh - 88px); }
+  .report-toc--tracking nav {
+    max-height: calc(100vh - 88px);
+    overflow: hidden;
+  }
 }
 .table-scroll {
   margin: 18px 0 24px;
