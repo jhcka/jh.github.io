@@ -20,9 +20,8 @@
         <p>{{ site.description | escape }}</p>
       </div>
       {% else %}
-      <a class="fn-brand" href="{{ '/' | relative_url }}">
+      <a class="fn-brand" href="{{ '/' | relative_url }}" aria-label="返回首页">
         <img class="brand-mark" src="{{ '/assets/mountain-mark.svg' | relative_url }}" width="30" height="30" alt="">
-        <span>{{ site.title | escape }}</span>
       </a>
       {% endif %}
       <nav class="site-nav" aria-label="主导航">

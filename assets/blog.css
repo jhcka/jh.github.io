@@ -80,10 +80,8 @@ a:focus-visible, main:focus-visible { outline: 2px solid #775509; outline-offset
 .fn-brand {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  min-width: 44px;
   min-height: 44px;
-  font-weight: 650;
-  text-decoration: none;
 }
 
 .brand-mark {
