@@ -12,7 +12,7 @@
 </head>
 <body class="fn-page">
   <a class="skip-link" href="#main">跳到正文</a>
-  <div class="fn-shell">
+  <div class="fn-shell{% if page.report %} fn-shell--report{% endif %}">
     <header class="fn-top{% if page.url == '/' %} fn-top--home{% endif %}">
       {% if page.url == '/' %}
       <div class="home-intro">
