@@ -69,13 +69,8 @@ a:focus-visible, main:focus-visible { outline: 2px solid #775509; outline-offset
 }
 
 .brand-mark {
-  display: grid;
-  width: 30px;
-  height: 30px;
-  place-items: center;
-  border: 1px solid #d6a44b;
-  background: var(--fn-gold-soft);
-  font-size: 15px;
+  display: block;
+  flex: none;
 }
 
 .site-nav { display: flex; flex-wrap: wrap; gap: 6px 22px; }
@@ -165,7 +160,7 @@ h3 { font-size: clamp(21px, 3vw, 26px); }
 
 .cover-mark {
   display: grid;
-  gap: 5px;
+  gap: 8px;
   border: 1px solid #d9caac;
   padding: 15px;
   background: #faf6e9;
@@ -176,8 +171,9 @@ h3 { font-size: clamp(21px, 3vw, 26px); }
   display: flex;
   justify-content: space-between;
   gap: 8px;
+  border-bottom: 1px solid #e0d4bc;
+  padding-bottom: 9px;
 }
-.cover-label:last-child { border-top: 1px solid #e0d4bc; padding-top: 9px; }
 
 .journal { padding-bottom: clamp(40px, 7vw, 76px); }
 .section-heading {
@@ -266,7 +262,7 @@ h3 { font-size: clamp(21px, 3vw, 26px); }
   .fn-top { padding: 12px 0; }
   .site-nav { gap: 4px; }
   .hero { grid-template-columns: 1fr; }
-  .cover-mark { display: none; }
+  .cover-mark { max-width: 360px; }
   .post-row { grid-template-columns: minmax(0, 1fr); gap: 5px; padding: 14px; }
   .post-meta { flex-direction: row; align-items: center; flex-wrap: wrap; padding-top: 0; }
 }

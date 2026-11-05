@@ -1,4 +1,4 @@
-# 纸间笔记
+# 日照金山
 
 一个使用 Hermes Field Notes 暖纸黄风格的 Jekyll 个人博客。
 
