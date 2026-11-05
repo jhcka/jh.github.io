@@ -13,11 +13,18 @@
 <body class="fn-page">
   <a class="skip-link" href="#main">跳到正文</a>
   <div class="fn-shell">
-    <header class="fn-top">
+    <header class="fn-top{% if page.url == '/' %} fn-top--home{% endif %}">
+      {% if page.url == '/' %}
+      <div class="home-intro">
+        <h1>{{ site.title | escape }}</h1>
+        <p>{{ site.description | escape }}</p>
+      </div>
+      {% else %}
       <a class="fn-brand" href="{{ '/' | relative_url }}">
         <img class="brand-mark" src="{{ '/assets/mountain-mark.svg' | relative_url }}" width="30" height="30" alt="">
         <span>{{ site.title | escape }}</span>
       </a>
+      {% endif %}
       <nav class="site-nav" aria-label="主导航">
         <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>首页</a>
         <a href="{{ '/archive/' | relative_url }}"{% if page.url == '/archive/' %} aria-current="page"{% endif %}>归档</a>
