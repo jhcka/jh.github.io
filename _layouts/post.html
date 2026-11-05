@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<article class="reading-column">
+  <header class="article-header">
+    <a class="text-link" href="{{ '/archive/' | relative_url }}">← 返回归档</a>
+    <div class="article-meta fn-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y.%m.%d" }}</time>
+      {% if page.category %}<span>{{ page.category | escape }}</span>{% endif %}
+    </div>
+    <h1>{{ page.title | escape }}</h1>
+    {% if page.description %}<p class="lede">{{ page.description | escape }}</p>{% endif %}
+  </header>
+  <div class="prose">
+    {{ content }}
+  </div>
+</article>

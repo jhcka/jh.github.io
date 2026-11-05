@@ -1,0 +1,19 @@
+{% assign posts = include.posts %}
+{% if posts.size > 0 %}
+  <ul class="post-list">
+    {% for post in posts limit: include.limit %}
+      <li class="post-row">
+        <div class="post-meta fn-meta">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m.%d" }}</time>
+          {% if post.category %}<span class="post-category">{{ post.category | escape }}</span>{% endif %}
+        </div>
+        <div class="post-copy">
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }} <span class="post-arrow" aria-hidden="true">↗</span></a></h3>
+          {% if post.description %}<p>{{ post.description | escape }}</p>{% endif %}
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p class="empty-state">第一篇笔记还在路上。</p>
+{% endif %}

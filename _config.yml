@@ -1,0 +1,18 @@
+title: 纸间笔记
+description: 记录读过、学过和想明白的事。
+url: https://jhcka.github.io
+baseurl: /jh.github.io
+repository_url: https://github.com/jhcka/jh.github.io
+lang: zh-CN
+timezone: Asia/Shanghai
+permalink: /notes/:title/
+markdown: kramdown
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+exclude:
+  - README.md
+  - docs

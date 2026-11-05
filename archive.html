@@ -1,0 +1,16 @@
+---
+layout: default
+title: 文章归档
+description: 按发布时间浏览全部笔记。
+permalink: /archive/
+---
+<section class="journal" aria-labelledby="archive-title">
+  <header class="page-heading">
+    <p class="fn-eyebrow">THE ARCHIVE</p>
+    <h1 id="archive-title">{{ page.title | escape }}</h1>
+    <p class="lede">{{ page.description | escape }}</p>
+  </header>
+  <h2 class="visually-hidden">全部文章</h2>
+  {% assign archive_limit = site.posts.size %}
+  {% include post-list.html posts=site.posts limit=archive_limit %}
+</section>
